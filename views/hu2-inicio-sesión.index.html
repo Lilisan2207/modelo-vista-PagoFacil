@@ -33,7 +33,7 @@
             <p>Por favor, escriba su correo electrónico y contraseña para acceder a su cuenta.
             ¡Bienvenido de nuevo!</p>
 
-            <form id="login-form" action="../views/hu3-home-sesion.html" method="GET">
+            <form id="login-form" action="./hu3-home-sesion.index.html" method="GET">
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
                     <input 
@@ -53,12 +53,18 @@
                         id="password" 
                         name="password" 
                         required
+                        
                     >
-                    <a href="../views/hu9-recuperar-contraseña.html" class="help-link">¿Olvidaste tu contraseña?</a>
+                    <a href="../views/hu9-recuperar-contraseña.index.html" class="help-link">¿Olvidaste tu contraseña?</a>
                 </div>
 
                 <!-- ✅ Botón de envío real (no un enlace) -->
-                <button type="submit" class="btn-primary">Iniciar sesión</button>
+                <section class="options-grid">
+            <a href="./hu3-home-sesion.index.html" class="btn-primary" style="text-decoration: none; display: inline-block; text-align: center;">
+    Iniciar sesion
+</a>
+</a>
+                
             </form>
 
             <!-- Enlace si no tiene cuenta -->
