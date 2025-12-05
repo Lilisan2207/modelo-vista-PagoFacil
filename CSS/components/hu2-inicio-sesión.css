@@ -117,6 +117,7 @@ body {
     margin-bottom: 20px;
     color: #555;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 /* Formulario */
@@ -132,7 +133,7 @@ label {
     color: #222;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 14px;
@@ -140,7 +141,7 @@ input[type="password"] {
     border: 2px solid #aaa;
     border-radius: 8px;
     background-color: #fafafa;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
 input:focus {
@@ -162,8 +163,9 @@ input:focus {
     text-decoration: underline;
 }
 
-/* Botones */
-.btn-primary {
+/* Botón principal — ahora compatible con <button> */
+.btn-primary,
+#login-form button[type="submit"] {
     display: block;
     width: 100%;
     padding: 16px;
@@ -176,33 +178,18 @@ input:focus {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+    font-family: inherit;
 }
 
+#login-form button[type="submit"]:hover,
 .btn-primary:hover {
     background-color: #45a049;
 }
 
+#login-form button[type="submit"]:active,
 .btn-primary:active {
     transform: translateY(2px);
-}
-
-.btn-secondary {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.2s;
-}
-
-.btn-secondary:hover {
-    background-color: #d0d0d0;
 }
 
 /* Enlace "Crear cuenta" */
@@ -240,6 +227,8 @@ input:focus {
     border-radius: 6px;
     font-size: 14px;
     transition: background-color 0.2s;
+    text-align: center;
+    min-width: 80px;
 }
 
 .footer-btn:hover {
@@ -257,10 +246,11 @@ input:focus {
     border-top: 1px solid #ddd;
 }
 
-/* Accesibilidad */
+/* Accesibilidad — foco para todos los elementos interactivos */
 input:focus,
-button:focus {
-    outline: 2px solid #005fcc;
+button:focus,
+a:focus {
+    outline: 3px solid #005fcc;
     outline-offset: 2px;
 }
 
@@ -275,12 +265,21 @@ button:focus {
         font-size: 17px;
     }
 
-    .btn-primary {
-        font-size: 17px;
+    .btn-primary,
+    #login-form button[type="submit"] {
+        font-size: 18px;
         padding: 18px;
     }
 
     .footer-links {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-btn {
+        width: 100%;
+        max-width: 200px;
     }
 }
