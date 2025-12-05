@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta - Pago Fácil</title>
+    <link rel="stylesheet" href="../CSS/components/hu1-crear-cuenta.css.css">
+</head>
+<body>
+    <!-- Barra de navegación única (azul) -->
+    <header class="top-nav">
+        <div class="nav-left">
+            <img src="../assets/logo.png" alt="Logo de Pago Fácil" class="logo">
+            <span class="nav-title">Pago Fácil</span>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <li><a href="../index.html">Contacto</a></li>
+                <li><a href="../index.html">Página Principal</a></li>
+                <li><a href="../views/hu2-inicio-sesión.index.html">Iniciar sesión</a></li>
+                <li><a href="#" class="active">Crear cuenta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <a href="../index.html" class="back-link">← Volver</a>
+
+        <div class="form-card">
+            <h2>Crear cuenta</h2>
+            <p>Complete los datos a continuación para registrarse en Pago Fácil.
+Es rápido, seguro y pensado especialmente para usted.</p>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana María López" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono celular (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="300 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar">Confirmar contraseña</label>
+                    <input type="password" id="confirmar" name="confirmar" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Crear mi cuenta</button>
+            </form>
+
+            <div class="login-link">
+                ¿Ya tiene una cuenta? <a href="../views/hu2-inicio-sesión.index.html">Iniciar sesión</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página global -->
+    <footer class="page-footer">
+        <div class="container">
+            <p>Hecho por Liliana Pérez Castiblanco, Madison Joel Villa, Jorge Andrés Fernández, David Barbosa Delgado</p>
+        </div>
+    </footer>

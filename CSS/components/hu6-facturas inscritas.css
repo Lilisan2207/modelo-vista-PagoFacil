@@ -1,0 +1,629 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+/* Barra de navegación superior */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a90e2;
+    padding: 12px 16px;
+    margin-bottom: 25px;
+    color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.nav-right ul li a:hover,
+.nav-right ul li a.active {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Avatar en el menú */
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.user-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botón "Volver" */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Tarjeta principal */
+.factura-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.factura-card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+}
+
+/* Botones de acción (Agregar/Eliminar) */
+.action-buttons-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-action {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-action:hover {
+    background-color: #d0d0d0;
+}
+
+.btn-action:active {
+    transform: translateY(2px);
+}
+
+/* Lista de facturas */
+.facturas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Item de factura */
+.factura-item {
+    background-color: #f0f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cce5ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    transition: background-color 0.2s;
+}
+
+.factura-item:hover {
+    background-color: #e6f2ff;
+}
+
+/* Información de la factura */
+.factura-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.factura-info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #222;
+}
+
+.factura-info strong {
+    color: #0056b3;
+}
+
+/* Acciones de la factura */
+.factura-actions {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.btn-pagar {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #08ba0e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-pagar:hover {
+    background-color: #45a049;
+}
+
+.btn-historial {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    background-color: #c8e6c9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-historial:hover {
+    background-color: #a5d6a7;
+}
+
+/* Pie de página global */
+.page-footer {
+    background-color: #eeeeee;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.footer-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.footer-btn:hover {
+    background-color: #3a7bd5;
+}
+
+/* ===== RESET Y CONFIGURACIÓN GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(90deg, #6AA8E0, #4F90D8);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    height: 32px;
+    width: auto;
+}
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-nav {
+    display: flex;
+    gap: 24px;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+.nav-link:hover {
+    opacity: 0.9;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* Botón Volver */
+.back-button {
+    background: none;
+    border: none;
+    color: #4F46E5;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.back-button:hover {
+    background: rgba(79, 70, 229, 0.1);
+}
+.arrow-left {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Encabezado de facturas */
+.facturas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e40af;
+}
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Botones de acción */
+.btn-add,
+.btn-delete {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-add {
+    background-color: #6aa8e0;
+    color: white;
+}
+.btn-add:hover {
+    background-color: #4f90d8;
+}
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+}
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+.btn-delete:disabled {
+    background-color: #fca5a5;
+    cursor: not-allowed;
+}
+
+/* Lista de facturas */
+.facturas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Tarjeta de factura */
+.factura-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: background 0.2s;
+}
+.factura-card:hover {
+    background: #f9fafb;
+}
+
+/* Checkbox personalizado */
+.factura-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-top: 4px;
+}
+.factura-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+.factura-checkbox label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.factura-checkbox input[type="checkbox"]:checked + label {
+    background: #4F46E5;
+    border-color: #4F46E5;
+}
+.factura-checkbox input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+/* Información de la factura */
+.factura-info {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+.factura-info p {
+    margin: 4px 0;
+}
+.factura-info strong {
+    color: #1e40af;
+}
+
+/* Acciones de la factura */
+.factura-actions {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.btn-pagar {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #08ba0e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-pagar:hover {
+    background-color: #45a049;
+}
+
+.btn-historial {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    background-color: #c8e6c9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-historial:hover {
+    background-color: #a5d6a7;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #f8fafc;
+    border-top: 2px solid #6aa8e0;
+    padding: 24px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.footer-btn {
+    background: #16A34A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.footer-btn:hover {
+    background: #15803d;
+}
+.footer-text {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    .header-left {
+        order: 1;
+    }
+    .header-nav {
+        order: 2;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .user-avatar {
+        order: 3;
+    }
+    .main-content {
+        padding: 0 16px;
+        margin: 24px 0;
+    }
+    .facturas-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .factura-card {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .factura-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .btn-delete {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Accesibilidad */
+button:focus,
+a:focus {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .factura-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .factura-actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-pagar,
+    .btn-historial {
+        width: 100%;
+        max-width: 150px;
+    }
+}

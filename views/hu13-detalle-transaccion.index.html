@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Pago Exitoso! - Pago Fácil</title>
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../CSS/components/hu13-detalle-transaccion.css">
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="header-left">
+        <img src="../assets/logo.png" alt="Logo Pago Fácil" class="logo">
+        <span class="header-title">Pago Fácil</span>
+    </div>
+    <nav class="header-nav">
+        <a href="#" class="nav-link">Contacto</a>
+        <a href="#" class="nav-link">Solicitar asistencia</a>
+        <a href="#" class="nav-link">Página Principal</a>
+        <a href="#" class="nav-link">Carlos Nieto</a>
+    </nav>
+    <div class="user-avatar">
+        <img src="../assets/avatar.png" alt="Avatar del usuario" class="avatar-img">
+    </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
+
+    <!-- Éxito visual -->
+    <div class="success-header">
+        <div class="check-icon">✅</div>
+        <h1 class="success-title">¡PAGO EXITOSO!</h1>
+        <p class="success-subtitle">Tu pago ha sido procesado correctamente</p>
+    </div>
+
+    <!-- Detalles de la transacción -->
+    <section class="transaction-details-section">
+        <h2 class="section-title">Detalles de la transacción</h2>
+
+        <div class="detail-row">
+            <span class="detail-label">ID de la transacción:</span>
+            <span class="detail-value">#111111111</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="detail-label">Fecha:</span>
+            <span class="detail-value">16/11/2025 19:30</span>
+        </div>
+
+        <div class="detail-row">
+            <span class="detail-label">Método de Pago:</span>
+            <span class="detail-value">Tarjeta de Crédito</span>
+        </div>
+
+        <div class="total-row">
+            <span class="detail-label">Total Pagado:</span>
+            <span class="detail-value">$350,000</span>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+           
+    <a href="/api/comprobante/12345" class="btn-link" download="comprobante-12345.pdf">
+  <button class="btn-download">Descargar Comprobante</button>
+</a>
+      <a href="../views/hu4-facturación.index.html" class="btn-link">
+  <button class="btn-back">Volver a Facturación</button>
+</a>
+<a href="../views/hu7-historial-facturas.index.html" class="btn-link">
+  <button class="btn-back">Ir a Historial de facturas</button>
+</a>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-buttons">
+        <button class="footer-btn">Tutoriales</button>
+        <button class="footer-btn">Información</button>
+        <button class="footer-btn">Afiliados</button>
+        <button class="footer-btn">Redes sociales</button>
+        <button class="footer-btn">Autores</button>
+    </div>
+    <div class="footer-text">Hecho por Liliana Pérez Castiblanco, Madison Joel Villa, Jorge Andrés Fernández, David Barbosa Delgado</div>
+</footer>
+
+</body>
+</html>

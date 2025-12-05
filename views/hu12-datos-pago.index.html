@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Pago - Pago Fácil</title>
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../CSS/components/hu12-datos-pago.css">
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="header-left">
+        <img src="logo.png" alt="Logo Pago Fácil" class="logo">
+        <span class="header-title">Pago Fácil</span>
+    </div>
+    <nav class="header-nav">
+        <a href="#" class="nav-link">Contacto</a>
+        <a href="#" class="nav-link">Solicitar asistencia</a>
+        <a href="#" class="nav-link">Página Principal</a>
+        <a href="#" class="nav-link">Nombre Persona</a>
+    </nav>
+    <div class="user-avatar">
+        <img src="../assets/avatar.png" alt="Avatar del usuario" class="avatar-img">
+    </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
+
+    <!-- Botón Volver -->
+    <main class="container">
+        <!-- Botón "Volver" -->
+        <a href="../views/hu11-resumen-pago.index.html" class="back-link">← Volver</a>
+
+    <!-- Sección de datos de pago -->
+    <section class="payment-form-section">
+        <h2 class="section-title">Datos de Pago</h2>
+        <p class="section-subtitle">Completa la información de tu tarjeta</p>
+
+        <!-- Campo: Número de tarjeta -->
+        <div class="form-group">
+            <label for="card-number">Número de tarjeta</label>
+            <input type="text" id="card-number" class="form-input" placeholder="XXXX XXXX XXXX XXXX">
+        </div>
+
+        <!-- Campo: Nombre del titular -->
+        <div class="form-group">
+            <label for="card-name">Nombre del titular</label>
+            <input type="text" id="card-name" class="form-input" placeholder="Nombre Completo">
+        </div>
+
+        <!-- Campos: Fecha de expiración y CVV -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="expiry-date">Fecha expiración</label>
+                <input type="text" id="expiry-date" class="form-input" placeholder="MM/AA">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" class="form-input" placeholder="123">
+            </div>
+        </div>
+
+        <!-- Total a pagar -->
+        <div class="total-box">
+            <span>Total a pagar:</span>
+            <span class="total-amount">$350,000</span>
+        </div>
+
+        <!-- Botón Pagar Ahora -->
+        <button class="btn-pay-now">Pagar Ahora</button>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-buttons">
+        <button class="footer-btn">Tutoriales</button>
+        <button class="footer-btn">Información</button>
+        <button class="footer-btn">Afiliados</button>
+        <button class="footer-btn">Redes sociales</button>
+        <button class="footer-btn">Autores</button>
+    </div>
+    <div class="footer-text">Hecho por Liliana Pérez Castiblanco, Madison Joel Villa, Jorge Andrés Fernández, David Barbosa Delgado</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Fácil - Sin sesión</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Barra de navegación superior -->
+            <nav class="top-nav">
+                <div class="nav-left">
+                    <img src="./assets/logo.png" alt="Logo de Pago Fácil" class="logo">
+                    <span class="nav-title">Pago Fácil</span>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#">Contactanos</a></li>
+                        <li><a href="./views/hu2-inicio-sesión.index.html" id="login-link">Iniciar sesión</a></li>
+                        <li><a href="./views/hu1-crear-cuenta.index.html">Crear cuenta</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Sección de bienvenida -->
+            <section class="welcome-section">
+                <h2>¡Bienvenido a pago fácil!</h2>
+                <p>Somos una página especializada en ayudar a adultos mayores a realizar sus pagos.</p>
+                <a href="./views/hu2-inicio-sesión.index.html" class="btn btn-primary">Paga ahora</a>
+            </section>
+
+            <!-- Sobre nosotros -->
+            <section class="about-section">
+                <h3>Sobre nosotros</h3>
+                <p>En Pago Fácil, hacer tus pagos es fácil, seguro y sin prisas.
+Todo está ordenado y claro, para que sepas en cada momento qué estás pagando y cuánto.
+Si lo deseas, puedes invitar a una persona de tu confianza a ayudarte con los trámites, y siempre tendrás la tranquilidad de que tus datos y tus pagos están bien protegidos.</p>
+            </section>
+
+            <!-- Video explicativo -->
+            <section class="video-section">
+    <h3>Míralo tú mismo</h3>
+    <p>¿Prefieres ver en lugar de leer? ¡No hay problema! Te preparamos un video sencillo que te explica todo paso a paso.</p>
+    <a href="https://www.youtube.com/watch?v=CAHnxKD44oc&t=7s" target="_blank" class="btn btn-primary">
+        🎬 Ver video explicativo
+    </a>
+</section>
+
+            <!-- Plataformas afiliadas -->
+            <section class="affiliates-section">
+                <h3>Plataformas afiliadas</h3>
+                <div class="affiliate-logos">
+                    <img src="./assets/bancolombia.png" alt="Logo de banco 1" class="affiliate-logo">
+                    <img src="./assets/aval.png" alt="AVAL" class="affiliate-logo">
+                    <img src="./assets/mastercard.png" alt="PSE" class="affiliate-logo">
+                    <img src="./assets/pse.jpg" alt="PSE" class="affiliate-logo">
+                    
+            
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="page-footer">
+        <div class="container">
+            <p>Hecho por Liliana Pérez Castiblanco, Madison Joel Villa, Jorge Andrés Fernández, David Barbosa Delgado</p>
+        </div>
+    </footer>
+
+    <!-- Script principal (opcional) -->
+    <script src="./JS/main.js"></script>
+</body>
+</html>

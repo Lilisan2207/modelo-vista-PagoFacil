@@ -1,0 +1,321 @@
+/* ===== RESET Y CONFIGURACIÓN GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(90deg, #6AA8E0, #4F90D8);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo {
+    height: 32px;
+    width: auto;
+}
+.header-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.header-nav {
+    display: flex;
+    gap: 24px;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+.nav-link:hover {
+    opacity: 0.9;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+}
+.welcome-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+.welcome-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+.welcome-action {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 16px;
+}
+.btn-pagar-ahora {
+    background: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-pagar-ahora:hover {
+    background: #4338ca;
+}
+
+/* Sección de facturas */
+.bills-section {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+.section-instruction {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 24px;
+}
+
+/* Tarjetas de factura */
+.bill-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.bill-card:hover {
+    background-color: #f9fafb;
+}
+.bill-card.selected {
+    border-color: #4F46E5;
+    background: #EEF2FF;
+}
+
+/* Checkbox personalizado */
+.bill-checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+.bill-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+.bill-checkbox label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.bill-checkbox input[type="checkbox"]:checked + label {
+    background: #4F46E5;
+    border-color: #4F46E5;
+}
+.bill-checkbox input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: white;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+/* Información de la factura */
+.bill-info {
+    flex: 1;
+    margin-right: 16px;
+}
+.bill-header {
+    font-weight: 600;
+    font-size: 16px;
+    color: #111827;
+    margin-bottom: 4px;
+}
+.bill-details {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Monto de la factura */
+.bill-amount {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+}
+
+/* Total seleccionado */
+.total-box {
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Botón continuar */
+.btn-continue {
+    width: 100%;
+    padding: 16px;
+    background: #16A34A;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-continue:hover {
+    background: #15803d;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #f8fafc;
+    border-top: 2px solid #6aa8e0;
+    padding: 24px 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.footer-btn {
+    background: #16A34A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.footer-btn:hover {
+    background: #15803d;
+}
+.footer-text {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    .header-left {
+        order: 1;
+    }
+    .header-nav {
+        order: 2;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .user-avatar {
+        order: 3;
+    }
+    .main-content {
+        padding: 0 16px;
+        margin: 24px 0;
+    }
+    .welcome-section,
+    .bills-section {
+        padding: 24px;
+    }
+    .bill-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .bill-info {
+        width: 100%;
+    }
+    .btn-continue {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

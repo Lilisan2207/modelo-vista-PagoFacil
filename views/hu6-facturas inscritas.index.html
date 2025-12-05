@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Facturas - Pago Fácil</title>
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../CSS/components/hu6-facturas inscritas.css">
+</head>
+<body>
+
+<!-- ENCABEZADO -->
+<header class="header">
+    <div class="header-left">
+        <img src="../assets/logo.png" alt="Logo Pago Fácil" class="logo">
+        <span class="header-title">Pago Fácil</span>
+    </div>
+    <nav class="header-nav">
+        <a href="#" class="nav-link">Contacto</a>
+        <a href="#" class="nav-link">Solicitar asistencia</a>
+        <a href="../index.html" class="nav-link">Página Principal</a>
+        <a href="#" class="nav-link">Carlos Nieto</a>
+    </nav>
+    <div class="user-avatar">
+        <img src="../assets/avatar.png" alt="Avatar del usuario" class="avatar-img">
+    </div>
+</header>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content">
+
+    <!-- Botón Volver -->
+    <a href="../hu4-facturación/index.html" class="back-link">← Volver</a>
+
+    <!-- Título y botones de acción -->
+    <section class="facturas-header">
+        <h2 class="section-title">Mis facturas inscritas</h2>
+        <div class="action-buttons">
+            <button id="btnAgregar" class="btn-add">Agregar facturas</button>
+            <button id="btnEliminar" class="btn-delete" disabled>Eliminar Facturas</button>
+        </div>
+    </section>
+
+    <!-- Lista de facturas -->
+    <div class="facturas-list">
+
+        <!-- Factura 1 -->
+        <div class="factura-card">
+            <div class="factura-checkbox">
+                <input type="checkbox" id="factura1" class="select-factura">
+                <label for="factura1"></label>
+            </div>
+            <div class="factura-info">
+                <p><strong>Nombre:</strong> Luz</p>
+                <p><strong>Empresa:</strong> EPM</p>
+                <p><strong>Fecha vencimiento:</strong> 15/06/2025</p>
+                <p><strong>Valor:</strong> $350.000</p>
+            </div>
+            <div class="factura-actions">
+                
+                <a href="../views/hu10-pago.index.html" class="btn-link">
+                <button class="btn-pagar">PAGAR</button>
+                </a>
+                <a href="../views/hu7-historial-facturas.index.html" class="btn-link">
+                <button class="btn-historial">Ver Historial</button>
+</a>
+            </div>
+        </div>
+
+        <!-- Factura 2 -->
+        <div class="factura-card">
+            <div class="factura-checkbox">
+                <input type="checkbox" id="factura2" class="select-factura">
+                <label for="factura2"></label>
+            </div>
+            <div class="factura-info">
+                <p><strong>Empresa:</strong> Acueducto Local</p>
+                <p><strong>Fecha vencimiento:</strong> 20/06/2025</p>
+                <p><strong>Valor:</strong> $250.000</p>
+            </div>
+            <div class="factura-actions">
+                <button class="btn-pagar">PAGAR</button>
+                <button class="btn-historial">Ver Historial</button>
+            </div>
+        </div>
+
+        <!-- Factura 3 (ejemplo adicional) -->
+        <div class="factura-card">
+            <div class="factura-checkbox">
+                <input type="checkbox" id="factura3" class="select-factura">
+                <label for="factura3"></label>
+            </div>
+            <div class="factura-info">
+                <p><strong>Nombre:</strong> Gas Natural</p>
+                <p><strong>Empresa:</strong> GasCo</p>
+                <p><strong>Fecha vencimiento:</strong> 25/06/2025</p>
+                <p><strong>Valor:</strong> $180.000</p>
+            </div>
+            <div class="factura-actions">
+                <button class="btn-pagar">PAGAR</button>
+                <button class="btn-historial">Ver Historial</button>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-buttons">
+        <button class="footer-btn">Tutoriales</button>
+        <button class="footer-btn">Información</button>
+        <button class="footer-btn">Afiliados</button>
+        <button class="footer-btn">Redes sociales</button>
+        <button class="footer-btn">Autores</button>
+    </div>
+    <div class="footer-text">Hecho por Liliana Pérez Castiblanco, Madison Joel Villa, Jorge Andrés Fernández, David Barbosa Delgado</div>
+</footer>
+
+<!-- SCRIPT JS -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectFacturas = document.querySelectorAll(".select-factura");
+    const btnEliminar = document.getElementById("btnEliminar");
+    const facturasCards = document.querySelectorAll(".factura-card");
+
+    // Actualizar estado del botón "Eliminar Facturas"
+    function updateDeleteButton() {
+      const selectedCount = document.querySelectorAll(".select-factura:checked").length;
+      btnEliminar.disabled = selectedCount === 0;
+    }
+
+    // Escuchar cambios en checkboxes
+    selectFacturas.forEach(checkbox => {
+      checkbox.addEventListener("change", updateDeleteButton);
+    });
+
+    // Eliminar facturas seleccionadas
+    btnEliminar.addEventListener("click", function () {
+      facturasCards.forEach(card => {
+        const checkbox = card.querySelector(".select-factura");
+        if (checkbox.checked) {
+          card.remove();
+        }
+      });
+      updateDeleteButton(); // Actualizar botón después de eliminar
+    });
+  });
+</script>
+
+</body>
+</html>
+  
